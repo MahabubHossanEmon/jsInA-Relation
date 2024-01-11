@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Event</title>
+</head>
+<body>
+    <p id="input-set">Defualts Text</p>
+    <input id="input-filed" type="text">
+    <button id="update-btn">Update</button>
+    <script>
+      document.getElementById('update-btn').addEventListener('click',function(){
+        const inputField=document.getElementById('input-filed');
+        const inputText=inputField.value;
+        const p=document.getElementById('input-set');
+        p.innerText=inputText;
+       inputField.value='';
+
+
+      })
+    </script>
+</body>
+</html>
